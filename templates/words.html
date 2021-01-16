@@ -1,17 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager</title>
-</head>
-<body>
-    {% for words in words %}
+{% extends "base.html" %}
+{% block content %}
+
+    <h2>I am a tag along</h2>
+   
+   {% for words in words %}
         {{ words.eng_word }}<br>
         {{ words.lt_word }}<br>
         {{ words.used_in_sentence }}<br>
         {{ words.category_name }}<br>
         {{ words.helpful_info }}<br>
     {% endfor %}
-</body>
-</html>
+
+{% endblock %}
