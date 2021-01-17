@@ -18,8 +18,8 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/words")
-def words():
+@app.route("/get_words")
+def get_words():
     words = mongo.db.words.find()
     return render_template("words.html", words=words)
 
