@@ -15,6 +15,15 @@ body {
     
 }
 
+h5 {
+    line-height: 0.2;
+    margin: 0.1rem 0 .1rem 0;
+}
+
+.container {
+    padding: 3%;
+}
+
 /*------------------ Font-Awesome Style ------------------*/
 
 .fa-user-plus:before {

@@ -3,7 +3,7 @@
 
 
 
-<div class="card">
+<div class="card col s12 m6">
      {% for words in words %}
     <div class="card-content center">
       <h5>{{ words.eng_word }}</h5>
@@ -11,13 +11,13 @@
     <div class="card-tabs">
       <ul class="tabs tabs-fixed-width">
         <li class="tab"><a href="#test4">Translate</a></li>
-        <li class="tab"><a class="active" href="#test5">Tip:</a></li>
+        <li class="tab"><a href="#test5">Tip:</a></li>
         <li class="tab"><a href="#test6">Used in a sentance:</a></li>
         <li class="tab"><a href="#test7">Category:</a></li>
       </ul>
     </div>
     <div class="card-content grey lighten-4 center">
-      <div id="test4">{{ words.lt_word }}</div>
+      <div id="test4"><h5>{{ words.lt_word }}</h5></div>
       <div id="test5">{{ words.helpful_info }}</div>
       <div id="test6">{{ words.used_in_sentence }}</div>
       <div id="test7">{{ words.category_name }}</div>
