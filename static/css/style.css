@@ -8,6 +8,13 @@ body {
 	font-family: 'Ribeye', sans-serif;
 }
 
+.card .card-content {
+    background-color: #c0e1ff;
+}
+
+.grey.lighten-4 {
+    background-color: #c0e1ff !important;
+}
 
 /*------------------ Text Style ------------------*/
 .text-shadow {
@@ -22,6 +29,32 @@ h5 {
 
 .container {
     padding: 3%;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    color: #09035a;
+
+}
+
+.tabs .tab a:hover, .tabs .tab a.active {
+    
+    color: #09035a;
+}
+
+tabs .tab a {
+    color: #09035a;
+}
+
+.tabs .indicator {
+    background-color: #09035a;
+}
+
+.tabs .tab a {
+    color: #09035a;
+}
+
+.tabs .tab a:focus, .tabs .tab a:focus.active {
+    background-color: rgb(255 220 122 / 82%);
 }
 
 /*------------------ Font-Awesome Style ------------------*/

@@ -100,7 +100,9 @@ def logout():
 
 @app.route("/add_words")
 def add_words():
-    return render_template("add_words.html")
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_words.html", categories=categories)
+    
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
