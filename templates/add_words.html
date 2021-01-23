@@ -1,13 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="white-text text-darken-4 text-shadow center-align">Add Word to Translate</h3>
+    <h3 class="teal-text center-align">Add Word to Translate</h3>
 
     <div class="row card-panel grey lighten-5">
         <form class="col s12" method="POST" action="">
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-shapes prefix blue-text text-darken-4"></i>
+                    <i class="fas fa-shapes teal-text prefix"></i>
                     <select id="category_name" name="category_name" class="validate" required>
                         <option value="" disabled selected>Select Category</option>
                         {% for category in categories %}
@@ -19,7 +19,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-pencil-alt prefix light-blue-text text-darken-4"></i>
+                    <i class="fas fa-pencil-alt prefix teal-text"></i>
                     <input id="eng_word" name="eng_word" minlength="1" maxlength="50"
                         type="text" class="validate" required>
                     <label for="eng_word">English Word</label>
@@ -27,7 +27,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-language prefix light-blue-text text-darken-4"></i>
+                    <i class="fas fa-language prefix teal-text"></i>
                     <textarea id="lt_word" name="lt_word" minlength="1"
                         maxlength="50" class="materialize-textarea validate" required></textarea>
                     <label for="lt_word">Lithuanian word</label>
@@ -35,7 +35,7 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-info prefix light-blue-text text-darken-4"></i>
+                    <i class="fas fa-info prefix teal-text"></i>
                     <textarea id="helpful_info" name="helpful_info" minlength="5"
                         maxlength="300" class="materialize-textarea validate" required></textarea>
                     <label for="helpful_info">Useful Information</label>
@@ -43,20 +43,12 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-align-left prefix light-blue-text text-darken-4"></i>
+                    <i class="fas fa-align-left prefix teal-text"></i>
                     <textarea id="used_in_sentence" name="used_in_sentence" minlength="5"
                         maxlength="300" class="materialize-textarea validate" required></textarea>
                     <label for="used_in_sentence">Example of word used in a sentance</label>
                 </div>
             </div>
-			<div class="row">
-				<div class="input-field col s12">
-                    <i class="fas fa-shapes prefix light-blue-text text-darken-4"></i>
-                    <textarea id="category_name" name="category_name" minlength="5"
-                        maxlength="50" class="materialize-textarea validate" required></textarea>
-                    <label for="category_name">Category</label>
-                </div>
-			</div>
         </form>
     </div>
 
