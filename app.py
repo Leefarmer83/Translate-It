@@ -98,6 +98,10 @@ def logout():
     return redirect(url_for("login"))
 
 
+@app.route("/add_words")
+def add_words():
+    return render_template("add_words.html")
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
