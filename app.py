@@ -98,11 +98,24 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_words")
+@app.route("/add_words", methods=["GET", "POST"])
 def add_words():
+    if request.method == "POST":
+        word = {
+            "eng_word": request.form.get("eng_word"),
+            "lt_word": request.form.get("lt_word"),
+            "helpful_info": request.form.get("helpful_info"),
+            "used_in_sentence": request.form.get("used_in_sentence"),
+            "category_name": request.form.get("category_name"),
+            "created_by": session["user"]
+        }
+        mongo.db.words.insert_one(word)
+        flash("Word Successfully Added")
+        return redirect(url_for("get_words"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_words.html", categories=categories)
-    
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

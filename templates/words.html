@@ -1,32 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="card">
-    {% for words in words %}
-    <div class="card-content teal-text z-depth-5 center">
-        <h4>{{ words.eng_word }}</h4>
-        <div class="progress">
-        </div>
-    </div>
-    <div class="card-tabs">
-        <ul class="tabs tabs-fixed-width">
-            <li class="tab"><a href="#test4">Translate</a></li>
-            <li class="tab"><a href="#test5">Tip:</a></li>
-            <li class="tab"><a href="#test6">Used in a sentance:</a></li>
-        </ul>
-    </div>
-    <div class="card-content teal accent-3 white-text text-shadow center">
-        <div id="test4">
-            <h4>{{ words.lt_word }}</h4>
-        </div>
-        <div id="test5">
-            <h4>{{ words.helpful_info }}</h4>
-        </div>
-        <div id="test6">
-            <h4>{{ words.used_in_sentence }}</h4>
-        </div>
-        <p><em>By: {{ words.created_by }}</em></p>
-    </div>
-    {% endfor %}
-</div>
+    <h3 class="teal-text center-align">All Words</h3>
+
+    <ul class="collapsible">
+         {% for words in words %}
+        <li>
+            <div class="collapsible-header white-text teal lighten-2 center text-shadow">
+                <i class="fas fa-caret-down"></i>
+                <h4>{{ words.eng_word }}</h4>
+            </div>
+            <div class="collapsible-body">
+                <h4>{{ words.lt_word }}</h4>
+            <span>
+                <p>{{ words.helpful_info }}</p>
+            </span>
+            <span>
+                <p><em>{{ words.used_in_sentence }}</em></p>
+                <p><em>By: {{ words.created_by }}</em></p>
+            </span>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
 {% endblock %}
