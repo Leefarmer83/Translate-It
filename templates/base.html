@@ -18,28 +18,28 @@
 <body>
 
     <header>
-    <div class="navbar-fixed">
-        <!-- top navbar -->
-        <nav class="nav-extended z-depth-5 teal lighten-2 text-shadow">
-            <div class="nav-wrapper">
-                <a href="{{ url_for('get_words') }}" class="brand-logo">Translate It</a>
-                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="{{ url_for('add_words') }}">Category</a></li>
-                    <li><a href="{{ url_for('get_words') }}">Words</a></li>
-                    {% if session.user %}
-                    <li><a href="{{ url_for('add_words') }}">Add Words</a></li>
-                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                    {% else %}
-                    <li><a href="{{ url_for('login') }}">Log In</a></li>
-                    <li><a href="{{ url_for('register') }}">Register</a></li>
-                    {% endif %}
+        <div class="navbar-fixed">
+            <!-- top navbar -->
+            <nav class="nav-extended z-depth-5 teal lighten-2 text-shadow">
+                <div class="nav-wrapper">
+                    <a href="{{ url_for('get_words') }}" class="brand-logo">Translate It</a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="{{ url_for('add_words') }}">Category</a></li>
+                        <li><a href="{{ url_for('get_words') }}">Words</a></li>
+                        {% if session.user %}
+                        <li><a href="{{ url_for('add_words') }}">Add Words</a></li>
+                        <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                        {% else %}
+                        <li><a href="{{ url_for('login') }}">Log In</a></li>
+                        <li><a href="{{ url_for('register') }}">Register</a></li>
+                        {% endif %}
 
-                </ul>
-            </div>
-        </nav>
-    </div>
+                    </ul>
+                </div>
+            </nav>
+        </div>
         <!-- mobile navbar -->
         <ul class="sidenav" id="mobile-demo">
             <li>
@@ -71,36 +71,33 @@
         {% endwith %}
     </section>
     <!-- Slider -->
-        <section class="slider">
-            <ul class="slides text-shadow">
-      <li>
-        <img class="responsive-img" src="{{ url_for('static', filename='images/background.jpg') }}"> 
-        <div class="caption center-align">
-          <h3>Welcome to Translate It!</h3>
-          <h5 class="light grey-text text-lighten-3">Build your own Lithuanian translation library.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="{{ url_for('static', filename='images/background.jpg') }}">
-        <div class="caption left-align">
-          <h3>Search and find the English words you want to translate.</h3>
-          <h5 class="light grey-text text-lighten-3">Can't find it? AWhy not add it.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="{{ url_for('static', filename='images/background.jpg') }}"> 
-        <div class="caption right-align">
-          <h3>Build your own Libray by loging in!</h3>
-          <h5 class="light grey-text text-lighten-3">Dont forget to add as much information as possible.</h5>
-        </div>
-      </li>
-    </ul>
-    
-
+    <section class="slider">
+        <ul class="slides text-shadow">
+            <li>
+                <img class="responsive-img" src="{{ url_for('static', filename='images/background.jpg') }}">
+                <div class="caption center-align">
+                    <h3>Welcome to Translate It!</h3>
+                    <h5 class="light grey-text text-lighten-3">Build your own Lithuanian translation library.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/background.jpg') }}">
+                <div class="caption left-align">
+                    <h3>Search and find the English words you want to translate.</h3>
+                    <h5 class="light grey-text text-lighten-3">Can't find it? AWhy not add it.</h5>
+                </div>
+            </li>
+            <li>
+                <img src="{{ url_for('static', filename='images/background.jpg') }}">
+                <div class="caption right-align">
+                    <h3>Build your own Libray by loging in!</h3>
+                    <h5 class="light grey-text text-lighten-3">Dont forget to add as much information as possible.</h5>
+                </div>
+            </li>
+        </ul>
+    </section>
 
     <main class="container">
-
-
         {% block content %}
         {% endblock %}
     </main>
