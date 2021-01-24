@@ -11,12 +11,15 @@
                 <h4>{{ words.eng_word }}</h4>  
             </div>
             <div class="collapsible-body center">
-                <h4>{{ words.lt_word }}</h4>
-            <span>
-                <p>{{ words.helpful_info }}</p>
+                <h4 class="lightred"> <em class="black-text">Translate It: </em>{{ words.lt_word }}</h4>
+                <div class="progress col s6">
+      <div class="determinate" style="width: 100%"></div>
+  </div>
+            <span><em class="black-text">Helpful ifo: </em>
+                <h5 class="teal-text">{{ words.helpful_info }}</h5>
             </span>
-            <span>
-                <p><em>{{ words.used_in_sentence }}</em></p>
+            <span><em class="black-text">Used in a sentance: </em>
+                <h5 class="teal-text">{{ words.used_in_sentence }}</h5>
                 <p><em>Entered: {{ words.created_by }}</em></p>
             </span>
             {% if session.user|lower == words.created_by|lower %}
