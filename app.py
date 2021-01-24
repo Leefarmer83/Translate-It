@@ -117,6 +117,25 @@ def add_words():
     return render_template("add_words.html", categories=categories)
 
 
+@app.route("/edit_words/<words_id>", methods=["GET", "POST"])
+def edit_words(words_id):
+    if request.method == "POST":
+        word = {
+            "eng_word": request.form.get("eng_word"),
+            "lt_word": request.form.get("lt_word"),
+            "helpful_info": request.form.get("helpful_info"),
+            "used_in_sentence": request.form.get("used_in_sentence"),
+            "category_name": request.form.get("category_name"),
+            "created_by": session["user"]
+        }
+        mongo.db.words.update({"_id": ObjectId(words_id)},word)
+        flash("Word Successfully Updated")
+
+    words = mongo.db.words.find_one({"_id": ObjectId(words_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_words.html", words=words, categories=categories)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
