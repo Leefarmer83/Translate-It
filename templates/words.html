@@ -6,18 +6,18 @@
     <ul class="collapsible">
          {% for words in words %}
         <li>
-            <div class="collapsible-header white-text teal lighten-2 center text-shadow">
+            <div class="collapsible-header white-text teal lighten-2 text-shadow">
                 <i class="fas fa-caret-down"></i>
                 <h4>{{ words.eng_word }}</h4>
             </div>
-            <div class="collapsible-body">
+            <div class="collapsible-body center">
                 <h4>{{ words.lt_word }}</h4>
             <span>
                 <p>{{ words.helpful_info }}</p>
             </span>
             <span>
                 <p><em>{{ words.used_in_sentence }}</em></p>
-                <p><em>By: {{ words.created_by }}</em></p>
+                <p><em>Entered: {{ words.created_by }}</em></p>
             </span>
             </div>
         </li>
