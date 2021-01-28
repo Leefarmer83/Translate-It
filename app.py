@@ -19,6 +19,12 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/home")
+def home():
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
+    return render_template("index.html", categories=categories)
+
+
 @app.route("/get_words")
 def get_words():
     words = list(mongo.db.words.find())
