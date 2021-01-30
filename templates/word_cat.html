@@ -1,12 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="teal-text center-align">Category name passed through</h3>
+<h3 class="teal-text center-align">{{ category.category_name }}</h3>
 
-
-    {% if words|length > 0%}
-    <ul class="collapsible">
+ <ul class="collapsible">
          {% for words in words %}
+         {% if categories.category_name == words.category_name %}
         <li>
             <div class="collapsible-header white-text teal lighten-2 text-shadow">
                 <i class="fas fa-caret-down"></i>
@@ -23,19 +22,13 @@
             <span><em class="black-text">Used in a sentance: </em>
                 <h5 class="teal-text">{{ words.used_in_sentence }}</h5>
                 <p><em>Entered: {{ words.created_by }}</em></p>
+                <p><em>Category: {{ words.category_name }}</em></p>
             </span>
-            {% if session.user|lower == words.created_by|lower %}
-            <a href="{{ url_for('edit_words', words_id=words._id) }}" class="waves-effect blue lighten-3 waves-effect waves-light btn white-text text-shadow btn-small">Edit</a>
-            <a href="{{ url_for('delete_words', words_id=words._id) }}" class="waves-effect red lighten-3 waves-effect waves-light btn white-text text-shadow btn-small">Delete</a>
-            {% endif %}
+         {% endif %}
             </div>
         </li>
         {% endfor %}
     </ul>
-    {% else %}
-
-    <h3 class="red-text center-align">No Words Found!<br><em class="teal-text">Why not add it yourself?</em></h3>
-    
-    {% endif%}
+            
 
 {% endblock %}

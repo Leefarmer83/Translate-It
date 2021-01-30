@@ -25,6 +25,15 @@ def home():
     return render_template("index.html", categories=categories)
 
 
+@app.route("/word_cat/<category_id>", methods=["GET", "POST"])
+def word_cat(category_id):
+    categories = list(mongo.db.categories.find())
+    category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
+    words = list(mongo.db.words.find())
+    return render_template(
+        "word_cat.html", category=category, words=words, categories=categories)
+
+
 @app.route("/get_words")
 def get_words():
     words = list(mongo.db.words.find())

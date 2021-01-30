@@ -10,10 +10,13 @@
                 <div class="card white-text teal lighten-2 text-shadow center-align">
                     <div class="card-content white-text">
                         <span class="card-title">{{ category.category_name }}</span>
+                         <a href="{{ url_for('word_cat', category_id=category._id) }}" class="waves-effect blue lighten-3 waves-effect waves-light btn white-text text-shadow waves-light btn-small">Edit</a>
                     </div>
                 </div>
             </div>
         {% endfor %}
+
+
     </div>
 
 {% endblock %}
