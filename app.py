@@ -30,8 +30,7 @@ def word_cat(category_id):
     categories = list(mongo.db.categories.find())
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     words = list(mongo.db.words.find())
-    return render_template(
-        "word_cat.html", category=category, words=words, categories=categories)
+    return render_template("word_cat.html", category=category, words=words, categories=category)
 
 
 @app.route("/get_words")
