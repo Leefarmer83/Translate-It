@@ -11,6 +11,10 @@ body {
     padding: 1px;
 }
 
+.padding {
+    padding: 10px;
+}
+
 .translate {
     color: brown;
 }

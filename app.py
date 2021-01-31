@@ -27,10 +27,10 @@ def home():
 
 @app.route("/word_cat/<category_id>", methods=["GET", "POST"])
 def word_cat(category_id):
+    categories = list(mongo.db.categories.find())
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     words = list(mongo.db.words.find())
-    return render_template(
-        "word_cat.html", category=category, words=words, categories=category)
+    return render_template("word_cat.html", category=category, words=words, categories=category)
 
 
 @app.route("/get_words")
@@ -106,8 +106,7 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        words = list(mongo.db.words.find())
-        return render_template("profile.html", username=username, words=words)
+        return render_template("profile.html", username=username)
 
     return redirect(url_for("login"))
 
