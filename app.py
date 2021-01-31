@@ -106,7 +106,8 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        words = list(mongo.db.words.find())
+        return render_template("profile.html", username=username, words=words)
 
     return redirect(url_for("login"))
 

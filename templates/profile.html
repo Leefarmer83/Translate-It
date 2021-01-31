@@ -10,5 +10,31 @@
             </div>
         </div>
     </div>
+      <ul class="collapsible">
+         {% for words in words %}
+         {% if session.user|lower == words.created_by|lower %}
+        <li>
+            <div class="collapsible-header white-text teal lighten-2 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                <h4>{{ words.eng_word }}</h4>  
+            </div>
+            <div class="collapsible-body center">
+                <h4 class="lightred"> <em class="black-text">Translate It: </em>{{ words.lt_word }}</h4>
+                <div class="progress col s6">
+      <div class="determinate" style="width: 100%"></div>
+  </div>
+            <span><em class="black-text">Helpful ifo: </em>
+                <h5 class="teal-text">{{ words.helpful_info }}</h5>
+            </span>
+            <span><em class="black-text">Used in a sentance: </em>
+                <h5 class="teal-text">{{ words.used_in_sentence }}</h5>
+            </span>
+            <a href="{{ url_for('edit_words', words_id=words._id) }}" class="waves-effect blue lighten-3 waves-effect waves-light btn white-text text-shadow btn-small">Edit</a>
+            <a href="{{ url_for('delete_words', words_id=words._id) }}" class="waves-effect red lighten-3 waves-effect waves-light btn white-text text-shadow btn-small">Delete</a>
+            {% endif %}
+        </div>
+        </li>
+        {% endfor %}
+    </ul>
 
 {% endblock %}
