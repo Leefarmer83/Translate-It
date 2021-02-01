@@ -34,6 +34,10 @@ body {
     
 }
 
+.text-shadow-no {
+    text-shadow: none;
+}
+
 .container {
     padding: 3%;
 }
