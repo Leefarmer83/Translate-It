@@ -31,11 +31,16 @@ body {
     word-wrap: break-word;
 }
 
+.margin_b {
+    margin-bottom: 20px;
+}
+
 /*------------------ Text Style ------------------*/
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     
 }
+
 
 .text-shadow-no {
     text-shadow: none;
@@ -69,4 +74,11 @@ nav .brand-logo {
 
 .lightred {
     color: #EF9A9A;
+}
+
+/*------------------ Tab styling   ------------------*/
+
+tabs .tab a:hover, .tabs .tab a.active {
+    background-color: transparent;
+    color: #040404;
 }
