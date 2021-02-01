@@ -27,23 +27,16 @@ body {
     padding: 14px;
 }
 
+
 /*------------------ Text Style ------------------*/
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     
 }
-/*------------------ 
-h5 {
-    line-height: 0.2;
-    margin: 0.1rem 0 .1rem 0;
-}
-Text Style ------------------*/
+
 .container {
     padding: 3%;
 }
-
-
-/*------------------ Font-Awesome Style ------------------*/
 
 
 
@@ -57,7 +50,7 @@ Text Style ------------------*/
 
 nav .brand-logo {
    
-    font-size: 2.0rem;
+    font-size: 1.9rem;
     
 }
 
