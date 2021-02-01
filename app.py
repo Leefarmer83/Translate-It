@@ -152,6 +152,7 @@ def edit_words(words_id):
         }
         mongo.db.words.update({"_id": ObjectId(words_id)},word)
         flash("Word Successfully Updated")
+        return redirect(url_for("get_words"))
 
     words = mongo.db.words.find_one({"_id": ObjectId(words_id)})
     categories = mongo.db.categories.find().sort("category_name", 1)
