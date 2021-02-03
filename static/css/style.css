@@ -49,6 +49,10 @@ body {
     
 }
 
+.roboto {
+    font-family: Roboto;
+}
+
 
 .text-shadow-no {
     text-shadow: none;
@@ -89,4 +93,8 @@ nav .brand-logo {
 tabs .tab a:hover, .tabs .tab a.active {
     background-color: transparent;
     color: #040404;
+}
+
+.tabs .tab a {
+    color: rgba(0,150,136,0.7);
 }

@@ -3,19 +3,19 @@
 
 <h3 class="teal-text center-align">Words</h3>
 
-<!-- Search Bar-->
-<div class="row card-panel teal lighten-4">
+<!-- Search -->
+<div class="row card-panel white lighten-4">
     <form action="{{ url_for('search') }}" method="post" class="col s12">
         <div class="row valign-wrapper center-align">
             <div class="input-field col s12 m8">
-                <i class="fas fa-search prefix text-shadow white-text"></i>
-                <input type="text" name="query" id="query" minlength="2" class="validate white" required>
-                <label for="query"><em class="white-text"> .</em> Search</label>
+                <i class="fas fa-search prefix teal-text"></i>
+                <input type="text" name="query" id="query" minlength="2" class="validate" required>
+                <label for="query"><em class="teal-text"> </em> Search</label>
             </div>
             <div class="col s12 m4">
                 <a href="{{ url_for('get_words') }}"
                     class="margin red lighten-3 waves-effect waves-light btn white-text text-shadow btn">Reset<i
-                        class="fas fa-trash-restore left"></i></a>
+                        class="fas fa-redo left"></i></a>
                 <button type="submit" class="margin blue lighten-3 waves-effect waves-light btn white-text text-shadow">
                     <i class="fas fa-search center"></i> Search
                 </button>
@@ -28,9 +28,9 @@
 {% for words in words %}
 
 
-<div class="card padding amber lighten-5 margin_b z-depth-5">
+<div class="card padding teal lighten-4 margin_b z-depth-5">
     
-        <div class="card-content teal-text center row-fluid">
+        <div class="card-content roboto black-text center row-fluid">
             <h5>{{ words.eng_word }}</h5>
 
 
@@ -42,7 +42,7 @@
                 <li class="tab"><a href="#tab3{{ loop.index }}">Used in a sentance</a></li>
             </ul>
         </div>
-        <div class="row-fluid card-content teal-text lighten-3 center padding">
+        <div class="roboto row-fluid card-content black-text lighten-3 center padding">
             <div  class="card-content" id="tab1{{ loop.index }}">
                 <h5>{{ words.lt_word }}</h5>
             </div>
@@ -82,7 +82,7 @@
         {% endfor %}
         {% else %}
 
-        <h3 class="red-text center-align">No Words Found!<br><em class="teal-text">Why not add it yourself?</em></h3>
+        <h3 class="black-text center-align">No Words Found!<br><em class="teal-text">Why not add it yourself?</em></h3>
 
         {% endif%}
 
