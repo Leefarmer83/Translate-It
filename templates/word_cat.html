@@ -3,32 +3,48 @@
 
 <h3 class="teal-text center-align">{{ category.category_name }}</h3>
 
- <ul class="collapsible">
-         {% for words in words %}
-         {% if categories.category_name == words.category_name %}
-        <li>
-            <div class="collapsible-header white-text teal lighten-2 text-shadow">
-                <i class="fas fa-caret-down"></i>
-                <h4>{{ words.eng_word }}</h4>  
+<!-- Word cards-->
+{% for words in words %}
+{% if categories.category_name == words.category_name %}
+
+<div class="card padding teal lighten-4 margin_b z-depth-5">
+    
+        <div class="card-content roboto black-text center row-fluid">
+            <h5>{{ words.eng_word }}</h5>
+
+
+        </div>
+        <div class="card card-tabs">
+            <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#tab1{{ loop.index }}">Translate-It</a></li>
+                <li class="tab"><a href="#tab2{{ loop.index }}">Helpful ifo</a></li>
+                <li class="tab"><a href="#tab3{{ loop.index }}">Used in a sentance</a></li>
+            </ul>
+        </div>
+        <div class="roboto row-fluid card-content black-text lighten-3 center padding">
+            <div  class="card-content" id="tab1{{ loop.index }}">
+                <h5>{{ words.lt_word }}</h5>
             </div>
-            <div class="collapsible-body center">
-                <h4 class="lightred"> <em class="black-text">Translate It: </em>{{ words.lt_word }}</h4>
-                <div class="progress col s6">
-      <div class="determinate" style="width: 100%"></div>
-  </div>
-            <span><em class="black-text">Helpful ifo: </em>
-                <h5 class="teal-text">{{ words.helpful_info }}</h5>
-            </span>
-            <span><em class="black-text">Used in a sentance: </em>
-                <h5 class="teal-text">{{ words.used_in_sentence }}</h5>
-                <p><em>Entered: {{ words.created_by }}</em></p>
-                <p><em>Category: {{ words.category_name }}</em></p>
-            </span>
-         {% endif %}
+            <div class="card-content" id="tab2{{ loop.index }}">
+                <h5>{{ words.helpful_info }}</h5>
+                <div class="card-content">
+        </div>
             </div>
-        </li>
-        {% endfor %}
-    </ul>
+            <div class="card-content" id="tab3{{ loop.index }}">
+                <h5>{{ words.used_in_sentence }}</h5>
+            </div>
+        </div>
+        
+    
+        </div>
+{% endif%}
+         {% endfor %}
+         <div class="container center teal-text"> 
+    <h4>Back to Categories</h4>
+        <a href="{{ url_for('home') }}" class="btn-floating blue lighten-2 text-shadow btn-large pulse"><i class="fas fa-pencil-alt"></i></a>
+</div>
+
+        
 
             
 
