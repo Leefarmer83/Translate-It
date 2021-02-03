@@ -25,6 +25,8 @@
 </div>
 
 {% if words|length > 0%}
+
+<!-- Word cards-->
 {% for words in words %}
 
 
@@ -60,10 +62,10 @@
             <a class="waves-effect red lighten-3  waves-light btn white-text text-shadow btn-small modal-trigger"
                 href="#modal{{ loop.index }}">Delete</a>
             <a href="{{ url_for('edit_words', words_id=words._id) }}"
-                class="waves-effect blue lighten-3 waves-effect waves-light btn white-text text-shadow waves-light btn-small">Edit</a>
+                class="waves-effect brown lighten-2 waves-effect waves-light btn white-text text-shadow waves-light btn-small">Edit</a>
             {% endif %}
         </div>
-
+<!-- pop up message when deleting-->
         <div id="modal{{ loop.index }}" class="modal">
             <div class="modal-content teal-text text-shadow-no">
                 <h4>Are you sure you want to delete?</h4>
