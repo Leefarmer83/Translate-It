@@ -7,7 +7,7 @@
 {% for words in words %}
 {% if categories.category_name == words.category_name %}
 
-<div class="card padding teal lighten-4 margin_b z-depth-5">
+<div class="card padding teal lighten-5 margin_b z-depth-5">
     
         <div class="card-content roboto black-text center row-fluid">
             <h5>{{ words.eng_word }}</h5>
@@ -35,13 +35,13 @@
             </div>
         </div>
         
-    
+     <!-- return to category -->
         </div>
 {% endif%}
          {% endfor %}
          <div class="container center teal-text"> 
     <h4>Back to Categories</h4>
-        <a href="{{ url_for('home') }}" class="btn-floating blue lighten-2 text-shadow btn-large pulse"><i class="fas fa-pencil-alt"></i></a>
+        <a href="{{ url_for('home') }}" class="btn-floating blue lighten-2 text-shadow btn-large pulse"><i class="fas fa-undo"></i></a>
 </div>
 
         

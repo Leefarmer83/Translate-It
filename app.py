@@ -10,21 +10,22 @@ if os.path.exists("env.py"):
 
 
 app = Flask(__name__)
+# Environment variables SECRET and MONGO_URI set in Heroku dashboard in production
 
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
-
-
+""" alot of the code below was inspired by code institute mini project """
+""" allows catagories to show on the home page """
 @app.route("/")
 @app.route("/home")
 def home():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("index.html", categories=categories)
 
-
+""" push category and id for category with words in category """
 @app.route("/word_cat/<category_id>", methods=["GET", "POST"])
 def word_cat(category_id):
     categories = list(mongo.db.categories.find())
@@ -32,20 +33,20 @@ def word_cat(category_id):
     words = list(mongo.db.words.find())
     return render_template("word_cat.html", category=category, words=words, categories=category)
 
-
+""" Show all words """
 @app.route("/get_words")
 def get_words():
     words = list(mongo.db.words.find())
     return render_template("words.html", words=words)
 
-
+""" Search section in words.html """
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
     words = list(mongo.db.words.find({"$text": {"$search": query}}))
     return render_template("words.html", words=words)
 
-
+""" Register user, if existing or succesful state. code taken from Mini project from code institute """
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -63,13 +64,13 @@ def register():
         }
         mongo.db.users.insert_one(register)
 
-        # put the new user into 'session' cookie
+# put the new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
         return redirect(url_for("profile", username=session["user"]))
     return render_template("register.html")
 
-
+""" Taken from mini project, log user in """
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
@@ -97,7 +98,7 @@ def login():
 
     return render_template("login.html")
 
-
+""" user profile page with words created """
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     # grab the session user's username from db
@@ -110,7 +111,7 @@ def profile(username):
 
     return redirect(url_for("login"))
 
-
+""" log user out, code inspired by mini project """
 @app.route("/logout")
 def logout():
     # remove user from session cookie
@@ -118,7 +119,7 @@ def logout():
     session.pop("user")
     return redirect(url_for("login"))
 
-
+""" add words to words, code inspired by code institute mini project """
 @app.route("/add_words", methods=["GET", "POST"])
 def add_words():
     if request.method == "POST":
@@ -137,7 +138,7 @@ def add_words():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_words.html", categories=categories)
 
-
+""" edit words to words, code inspired by code institute mini project """
 @app.route("/edit_words/<words_id>", methods=["GET", "POST"])
 def edit_words(words_id):
     if request.method == "POST":
@@ -157,18 +158,20 @@ def edit_words(words_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_words.html", words=words, categories=categories)
 
-
+""" delete words, code inspired by code institute mini project """
 @app.route("/delete_words/<words_id>")
 def delete_words(words_id):
     mongo.db.words.remove({"_id": ObjectId(words_id)})
     flash("Words Successfully Deleted")
     return redirect(url_for("get_words"))
 
+""" pass category """
 @app.route("/get_categories")
 def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("manage_categories.html", categories=categories)
 
+""" adding category function """
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
@@ -181,7 +184,7 @@ def add_category():
 
     return render_template("add_category.html")
 
-
+""" editing category """
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
     if request.method == "POST":
@@ -195,7 +198,7 @@ def edit_category(category_id):
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
 
-
+""" delete category """
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
