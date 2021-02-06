@@ -4,8 +4,11 @@
 /*------------------General------------------*/
 
 body {
-	font-family: 'Ribeye', sans-serif;
+    font-family: 'Ribeye', sans-serif;
+    
 }
+
+/*------------------Padding and Margin------------------*/
 
 .card .card-content {
     padding: 1px;
@@ -20,30 +23,26 @@ body {
     margin: -0.33333rem 0 .46rem 0;
 }
 
-.translate {
-    color: brown;
-}
-
 .margin {
     margin: 4px;
-}
-
-.ml {
-    padding: 14px;
-}
-
-.row-fluid {
-    word-wrap: break-word;
 }
 
 .margin_b {
     margin-bottom: 20px;
 }
 
+.container {
+    padding: 3%;
+}
+
 /*------------------ Text Style ------------------*/
 .text-shadow {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
     
+}
+
+.row-fluid {
+    word-wrap: break-word;
 }
 
 .roboto {
@@ -54,12 +53,6 @@ body {
 .text-shadow-no {
     text-shadow: none;
 }
-
-.container {
-    padding: 3%;
-}
-
-
 
 /*------------------ Flash message ------------------*/
 
@@ -76,10 +69,6 @@ nav .brand-logo {
 }
 
 /*------------------ collapsible card  ------------------*/
-
-.collapsible-body {
-    padding: 2%;
-}
 
 .lightred {
     color: #EF9A9A;
