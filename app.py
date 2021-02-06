@@ -36,7 +36,7 @@ def word_cat(category_id):
 """ Show all words """
 @app.route("/get_words")
 def get_words():
-    words = list(mongo.db.words.find())
+    words = list(mongo.db.words.find().sort("eng_word", 1))
     return render_template("words.html", words=words)
 
 """ Search section in words.html """
