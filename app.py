@@ -34,6 +34,11 @@ def home():
     return render_template("index.html", categories=categories)
 
 
+@app.route('/pronunciation')
+def pronunciation():
+    return render_template("pronunciation.html")
+
+
 @app.route("/word_cat/<category_id>", methods=["GET", "POST"])
 def word_cat(category_id):
     """
