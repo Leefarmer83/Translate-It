@@ -90,6 +90,17 @@ The strategy for the design was to create an easy using website that naturally t
 The thought process behind adding words was to have the user stick to a template that would naturally add words to the existing library. Users will need to select a category, state the word, the translation of that word, useful information, and an example of the word in a sentence.
 [Database collection structure in MongoDB](https://github.com/Leefarmer83/Translate-It/blob/master/static/wire_frames/mongoDB_data_stucture.png)
 
+### User structure
+Anyone visiting the site can search words and categories.
+Users can only add words once they are registered and logged in. 
+Users can only delete their created words.
+Users can only edit their own created words.
+The Admin can only add, delete and edit categories.
+User with access to database can delete, add and edit all.
+
+
+
+
 
 # Technologies Used
 
@@ -133,7 +144,7 @@ Once a user has registered, they land on the Profile page. The first time a user
 # words.html
 When a user clicks on individual word search on the home page, they land on the Words page. Here the user can enter a word, reset the search to start again, or search for the word if they are happy with the entry they made. If a user opts to reset, the search bar clears and they are free to input another word. 
 If a user inputs a word into search, and it is not in the prepopulated library, the user can add it themself if they are logged in. 
-On the Words page, users will also find all the words from the prepopulated categories listed in alphabetical order, with its translation, and the option to select useful information, and how the word is used in a sentence. Users can also choose to edit or delete the words. 
+On the Words page, users will also find all the words from the prepopulated categories listed in alphabetical order, with its translation, and the option to select useful information, and how the word is used in a sentence. Users can also choose to edit or delete the words, if they created the word. 
 Users also have the option to register or login from this page, as words can only be added once logged in.
 # word_cat.html
 When a user clicks on a category on the home page, they land on the Categories page. Here all the prepopulated words from the selected category are listed in alphabetical order, with the word’s translation, and the option to select useful information, and how the word is used in a sentence. Users can also use the return button at the bottom of the page to return to the main categories.
@@ -144,16 +155,20 @@ Once a user has added words, they can see all of their words that they have adde
 # pronunciation.html
 When a user selects Pronunciation from the toolbar, they land on the Pronunciation page. The table on this page lists the letters from the Lithuanian alphabet, how that letter sounds in English, together with an English word to illustrate an example of the sound in an English word.
 # add_category.html
-Once logged in, users can Manage Categories. Users click on the Add Category button, and are taken to a form where they can input the name of a new category. Users click on the Add Category button to have the category added. The new category appears under the prepopulated categories. The new category can be edited. Users can cancel the edit, or enable their changes by clicking on the Edit_Category button. The new category can be deleted by clicking on the delete button. A warning pop up message appears to notify the user that this cannot be undone. Users can opt to cancel by clicking on the cancel button, or complete the delete by clicking the delete button.
+Once logged in as Admin, users can Manage Categories. Users click on the Add Category button, and are taken to a form where they can input the name of a new category. Users click on the Add Category button to have the category added. The new category appears under the prepopulated categories. The new category can be edited. Users can cancel the edit, or enable their changes by clicking on the Edit_Category button. The new category can be deleted by clicking on the delete button. A warning pop up message appears to notify the user that this cannot be undone. Users can opt to cancel by clicking on the cancel button, or complete the delete by clicking the delete button.
 # edit_category.html
-Users can edit the pre-populated categories, and any categories they have added, by clicking on the edit button. In the Edit Category form, users can edit the category name. Users can opt to cancel by clicking on the cancel button, or complete the edit by clicking on the Edit_Category button.
+Admin can edit the pre-populated categories, and any categories they have added, by clicking on the edit button. In the Edit Category form, admin can edit the category name. admin can opt to cancel by clicking on the cancel button, or complete the edit by clicking on the Edit_Category button.
 # edit_words.html
 When a user searches for a word, and the word is returned, they have the option to edit the word. The edit function allows the user to change the category, English word for example the spelling, the Lithuanian translation, useful information, and how the word is used in a sentence. To complete the editing, users click the Edit Word button at the bottom of the form. 
 
 Users can also delete the word by clicking on the delete button. If a user opts to delete, a pop up appears with a warning message, reminding the user that the action cannot be undone. Users can then click delete or opt to cancel.
 # manage_categories
-Once logged in, users can Manage Categories. Users can add a category by clicking on the Add Category button. Existing categories can be deleted or edited. If a user opts to delete the category by clicking on the delete button, a pop up message warning tells the user that this action cannot be undone. Users can choose to delete, or cancel the deletion. If a user opts to edit a category, they click on the edit button and are taken to  the Edit Category form where users can edit the category name. Users can opt to cancel by clicking on the cancel button, or complete the edit by clicking on the Edit_Category button.
+Once logged in as admin, users can Manage Categories. Users can add a category by clicking on the Add Category button. Existing categories can be deleted or edited. If a user opts to delete the category by clicking on the delete button, a pop up message warning tells the user that this action cannot be undone. Users can choose to delete, or cancel the deletion. If a user opts to edit a category, they click on the edit button and are taken to  the Edit Category form where users can edit the category name. Users can opt to cancel by clicking on the cancel button, or complete the edit by clicking on the Edit_Category button.
 # Future Features
+contact for adding categories
+Click to hear function on words and pronunciation
+Capture email addresses if website goes public 
+
 
 
 
