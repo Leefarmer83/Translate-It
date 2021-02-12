@@ -47,6 +47,25 @@ The website is deployed live at [https://my-translate-it.herokuapp.com/](https:/
 # UX
 The site is for children (and their parents) who would like to start building their vocabulary of useful words in Lithuanian through the creation of a word library to enhance their conversational skills. The easy to use interface features word search, words arranged by category, definitions and helpful information, as well as the ability to add a user’s own words. There is an Administrator’s Portal where additional categories can be added. 
 
+## User Stories
+
+- [1] As a user, I want to have a library of words that are translated into Lithuanian so that I can learn to use them in a conversation. 
+- [2] As a user, I want to be able to add more words with Lithuanian translation to a library as my English vocabulary expands. 
+- [3] As a user, I want to be able to add useful information to any word I create, and show know how to use the word when speaking. 
+- [4] As a user, I want to be able to find a guide that shows me  how to pronounce a Lithuanian word. 
+- [5] As a user, I want to be able to find related words easily. 
+- [6] As a parent, I want to be able to find a collection of words that are age appropriate for my child to learn to translate into Lithuanian.
+- [7] As a parent, I want to be able to have some control over the words my child learns, so that I can focus their learning.
+
+
+
+
+
+
+
+
+
+
 Mock Ups
 
 Colour and font
