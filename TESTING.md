@@ -2,11 +2,23 @@
 
 [return to README.md](https://github.com/Leefarmer83/Translate-It)
 
+
 # base.html
 
+action taken | expected result | pass/fail
+------------ | --------------- | ---------
+When not logged in | Log in and Register links should display | pass
+When logged in | A link to my profile page add words show| pass
+Clicked Log In | Display login.html | pass
+Clicked Register | Display register.html | pass
+Clicked  Profile page | Display my profile page. Profile.html/<username> | pass
+Clicked Home | Display index.html | pass
+When logged in as admin | Manage categories shows | pass
+When viewing on mobile | Burger menu shows | pass
+Click on burger menu | Mobile side menu comes in from right | pass
+Check all links | All links take user to desired location | pass
 
 # index.html (Home)
-## Testing
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Clicked on search word now | Navigates to words.html | pass
@@ -14,7 +26,7 @@ Clicked on every category (9) | Taken to the category and olny words that belong
 
 
 # register.html
-## Testing
+
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Only used 1 to 4 letters for username  | Section turns red and message states please match requested format| pass
@@ -30,7 +42,6 @@ Cliked on Log In | Takes you to login page| pass
 Enter a successful username and password | Flash message stating succesful registration| pass
 
 # login.html
-## Testing
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Only used 1 to 4 letters for username  | Section turns red and message states please match requested format| pass
@@ -41,7 +52,6 @@ Cliked on Register button | Takes you to Register page| pass
 
 
 # profile.html
-## Testing
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Log in | Username shows | pass
@@ -54,7 +64,6 @@ Clicked on confirm deletion | Word is deleted from profile and library| pass
 
 
 # words.html
-## Testing
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Search for a word that is in the library | Only that word shows and/or same word (good as an example) | pass
@@ -68,13 +77,11 @@ Click on register and log in links on page | Taken to the correct location| pass
 
 
 # word_cat.html
-## Testing
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Click on each category on home.html | Object id passed category name and created words under category | pass
 
 # add_words.html
-## Testing
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Click on add word | Taken to add word form | pass
@@ -88,14 +95,12 @@ All words entered correctly | Word is added to library and flash messege shown| 
 Successful word added | word added to profile page | pass
 
 # add_category.html
-## Testing
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Click on add category | taken to add category page| pass
 Add new category | New category shows on manage category page and index.html page | pass
 
 # edit_category.html
-## Testing
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Click on edit category | taken to edit category page| pass
@@ -103,7 +108,6 @@ Edit category | Category is edited and shows on manage category page and index.h
 Clicked on cancel | Taken back to manage category page | pass
 
 # edit_words.html
-## Testing
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 If the user created the word, click on edit word | taken to edit word page| pass
@@ -113,7 +117,6 @@ If the user created the word, click delete word | Pop up message shows| pass
 Confirm delete word | word is deleted from words page | pass
 
 # manage_categories
-## Testing
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Only Admin can see this section | Only shown to admin user | pass
