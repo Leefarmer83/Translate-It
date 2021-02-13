@@ -214,11 +214,11 @@ Username/password reset functionality - I would like to include this feature for
 
 # Deployment
 ### Requirements for Deployment
-Gitpod
-Python3 to run application
-PIP to install all app requirements
-Database = MongoDB 
-Heroku account
+- Gitpod
+- Python3 to run application
+- PIP to install all app requirements
+- Database = MongoDB 
+- Heroku account
 
 ### GitHub setup
 
