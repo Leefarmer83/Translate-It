@@ -90,6 +90,12 @@ The strategy for the design was to create an easy using website that naturally t
 The thought process behind adding words was to have the user stick to a template that would naturally add words to the existing library. Users will need to select a category, state the word, the translation of that word, useful information, and an example of the word in a sentence.
 [Database collection structure in MongoDB](https://github.com/Leefarmer83/Translate-It/blob/master/static/wire_frames/mongoDB_data_stucture.png)
 
+### Colour and font
+Colour and font were taken into account in order to make the interface eye catching for children, but also incorporated best practices in terms of accessibility, in order to cater for users of all learning abilities. 
+
+### Images
+Images used are from a free image website: https://www.shutterstock.com/.
+
 ### User structure
 Anyone visiting the site can search words and categories.
 Users can only add words once they are registered and logged in. 
@@ -97,6 +103,10 @@ Users can only delete their created words.
 Users can only edit their own created words.
 The Admin can only add, delete and edit categories.
 User with access to database can delete, add and edit all.
+
+**Related user story addressed:**
+- [7] As a parent, I want to be able to have some control over the words my child learns, so that I can focus their learning.
+
 
 # Technologies Used
 
@@ -150,11 +160,26 @@ If a user inputs a word into search, and it is not in the prepopulated library, 
 On the Words page, users will also find all the words from the prepopulated categories listed in alphabetical order, with its translation, and the option to select useful information, and how the word is used in a sentence. Users can also choose to edit or delete the words, if they created the word. 
 Users also have the option to register or login from this page, as words can only be added once logged in.
 
+**Related user story addressed:**
+[1] As a user, I want to have a library of words that are translated into Lithuanian so that I can learn to use them in a conversation. 
+[3] As a user, I want to be able to add useful information to any word I create, and show know how to use the word when speaking.
+[5] As a user, I want to be able to find related words easily.
+
 # word_cat.html
 When a user clicks on a category on the home page, they land on the Categories page. Here all the prepopulated words from the selected category are listed in alphabetical order, with the word’s translation, and the option to select useful information, and how the word is used in a sentence. Users can also use the return button at the bottom of the page to return to the main categories.
 
+**Related user story addressed:**
+[6] As a parent, I want to be able to find a collection of words that are age appropriate for my child to learn to translate into Lithuanian.
+
 # add_words.html
 If logged in, users are able to add a word to Translate It! To do this, they select a category using the drop down menu. They then add the English word, the Lithuanian translation, useful information, and how the word is used in a sentence. To have the entry added, users click the Add Word button at the bottom of the form.
+
+**Related user story addressed:**
+[3] As a user, I want to be able to add useful information to any word I create, and show know how to use the word when speaking.
+
+**Related user story addressed:**
+[2] As a user, I want to be able to add more words with Lithuanian translation to a library as my English vocabulary expands. 
+
 
 # my_words.html
 Once a user has added words, they can see all of their words that they have added to the library. These words are displayed in the same card format as words on the Words page, with the translation, helpful information, and how the word is used in a sentence. Users can edit or delete these words. Users can add words or search for words using the buttons at the bottom of the page.
@@ -162,8 +187,14 @@ Once a user has added words, they can see all of their words that they have adde
 # pronunciation.html
 When a user selects Pronunciation from the toolbar, they land on the Pronunciation page. The table on this page lists the letters from the Lithuanian alphabet, how that letter sounds in English, together with an English word to illustrate an example of the sound in an English word.
 
+**Related user story addressed:**
+4] As a user, I want to be able to find a guide that shows me  how to pronounce a Lithuanian word.
+
 # add_category.html
 Once logged in as Admin, users can Manage Categories. Users click on the Add Category button, and are taken to a form where they can input the name of a new category. Users click on the Add Category button to have the category added. The new category appears under the prepopulated categories. The new category can be edited. Users can cancel the edit, or enable their changes by clicking on the Edit_Category button. The new category can be deleted by clicking on the delete button. A warning pop up message appears to notify the user that this cannot be undone. Users can opt to cancel by clicking on the cancel button, or complete the delete by clicking the delete button.
+
+**Related user story addressed:**
+[6] As a parent, I want to be able to find a collection of words that are age appropriate for my child to learn to translate into Lithuanian.
 
 # edit_category.html
 Admin can edit the pre-populated categories, and any categories they have added, by clicking on the edit button. In the Edit Category form, admin can edit the category name. admin can opt to cancel by clicking on the cancel button, or complete the edit by clicking on the Edit_Category button.
@@ -177,27 +208,12 @@ Users can also delete the word by clicking on the delete button. If a user opts 
 Once logged in as admin, users can Manage Categories. Users can add a category by clicking on the Add Category button. Existing categories can be deleted or edited. If a user opts to delete the category by clicking on the delete button, a pop up message warning tells the user that this action cannot be undone. Users can choose to delete, or cancel the deletion. If a user opts to edit a category, they click on the edit button and are taken to  the Edit Category form where users can edit the category name. Users can opt to cancel by clicking on the cancel button, or complete the edit by clicking on the Edit_Category button.
 
 # Future Features
-contact for adding categories
-Click to hear function on words and pronunciation
-Capture email addresses if website goes public 
-forgot/reset password functionality 
+Contact for adding categories - I would like to add a contact form for users to request new categories.
+Click to hear pronunciation - I would like to add a feature whre you have a listen event on the word so you can hear the pronunciation.
+Capture email addresses - If I was to offer the website out to the worrld, i would include and email address capture when users register.
+Username/password reset functionality - I would like to include this feature for users to be self serving if they forget their log in details.
+ 
 
-
-
-
-
-
-
-Colour and font
-Colour and font were taken into account in order to make the interface simple to navigate and use, but also incorporated best practices in terms of accessibility, in order to cater for users of all learning abilities. 
-
-Features
-
-Technologies Used
-
-Link to Websites
-
-Testing
 
 Deployment
 
