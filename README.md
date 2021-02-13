@@ -129,7 +129,7 @@ User with access to database can delete, add and edit all.
 All testing can be found here [View TESTING.md](TESTING.md)
 
 # base.html
-
+All pages will inherit html from base.html. The website header contains the website navbar and footer, flash messaging. User rulstructurees is set in the base.html.
 
 # index.html (Home)
 The home page features a search function where users can search for an individual word by clicking on the search button. There is also a Categories section that features 9 prepopulated categories of words for users to search on.
