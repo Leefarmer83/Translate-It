@@ -169,3 +169,11 @@ Clicked on add category button | User taken to add category | pass
 **HTML validator:**
 Errors are seen, this is expected due to the validator not handling Flask inside the HTML
 
+
+# Pronunciation.html
+action taken | expected result | pass/fail
+------------ | --------------- | ---------
+Mobile view | alphabetical view is scrolling | pass
+
+**HTML validator:**
+Errors are seen, this is expected due to the validator not handling Flask inside the HTML
