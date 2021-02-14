@@ -9,6 +9,7 @@
 - [W3C Markup Validation Service](https://validator.w3.org/)
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
 - [JSHint](https://jshint.com/)
+- [PEP8 Validator](http://pep8online.com/)
 
 Validation message are below under each feature page.
 
@@ -184,3 +185,25 @@ Mobile view | alphabetical view is scrolling | pass
 
 **HTML validator:**
 Errors are seen, this is expected due to the validator not handling Flask inside the HTML
+
+# CSS file
+W3C CSS Validator results for TextArea (CSS level 3 + SVG)
+**Congratulations! No Error Found.**
+This document validates as CSS level 3 + SVG !
+
+# Java Script file
+There are 7 functions in this file.
+
+Function with the largest signature take 0 arguments, while the median is 0.
+
+Largest function has 7 statements in it, while the median is 3.
+
+The most complex function has a cyclomatic complexity value of 3 while the median is 2.
+
+Two warnings
+19	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+20	'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+**This code was copied from Code Institute as a work around**
+
+# Python file
+Code has been given the "All right". 
