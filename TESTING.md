@@ -12,10 +12,7 @@
 
 Validation message are below under each feature page.
 
-
-
 # base.html
-
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 When not logged in | Log in and Register links should display | pass
@@ -29,13 +26,10 @@ When viewing on mobile | Burger menu shows | pass
 Click on burger menu | Mobile side menu comes in from right | pass
 Check all links | All links take user to desired location | pass
 
-
 **HTML validator:**
 Errors are seen, this is expected due to the validator not handling Flask inside the HTML
 
 There is three warning messages: "Warning: Empty heading." this is due to fontawsome icons taking the place of text.
-
-
 
 # index.html (Home)
 action taken | expected result | pass/fail
@@ -106,10 +100,16 @@ Words not by user | Delete and Edit button do not show| pass
 Click on the tabs on each card to show ndividual data | Correct information is under desired tab| pass
 Click on register and log in links on page | Taken to the correct location| pass
 
+**HTML validator:**
+Errors are seen, this is expected due to the validator not handling Flask inside the HTML
+
 # word_cat.html
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Click on each category on home.html | Object id passed category name and created words under category | pass
+
+**HTML validator:**
+Errors are seen, this is expected due to the validator not handling Flask inside the HTML
 
 # add_words.html
 action taken | expected result | pass/fail
@@ -146,6 +146,10 @@ Clicked on cancel | Taken back to manage category page | pass
 **HTML validator:**
 Errors are seen, this is expected due to the validator not handling Flask inside the HTML
 
+**Bug Fix**
+I was having problems deleting words and Categories, every time i deleted, it always deleted the first word. This was down to the ID not being unique, I added {{ loop.index }} in the ID to fix this.
+
+
 # edit_words.html
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
@@ -158,6 +162,10 @@ Confirm delete word | word is deleted from words page | pass
 **HTML validator:**
 Errors are seen, this is expected due to the validator not handling Flask inside the HTML
 
+**Bug Fix**
+I was having problems deleting words and Categories, every time i deleted, it always deleted the first word. This was down to the ID not being unique, I added {{ loop.index }} in the ID to fix this.
+
+
 # manage_categories.html
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
@@ -168,7 +176,6 @@ Clicked on add category button | User taken to add category | pass
 
 **HTML validator:**
 Errors are seen, this is expected due to the validator not handling Flask inside the HTML
-
 
 # Pronunciation.html
 action taken | expected result | pass/fail

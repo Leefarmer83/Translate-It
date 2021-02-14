@@ -2,94 +2,102 @@
 {% block content %}
 
 <h3 class="teal-text center-align">Words</h3>
-<p class="teal-text center">If you would like to add a word, please make sure you have <a href="{{ url_for('register') }}">registered</a> and have <a href="{{ url_for('login') }}">Logged in.</a></p>
-
+<p class="teal-text center">If you would like to add a word, please make sure you have 
+	<a
+        href="{{ url_for('register') }}">registered</a> and have 
+	<a href="{{ url_for('login') }}">Logged in.</a>
+</p>
 <!-- Search -->
 <div class="row card-panel white lighten-4">
-    <form action="{{ url_for('search') }}" method="post" class="col s12">
-        <div class="row valign-wrapper center-align">
-            <div class="input-field col s12 m8">
-                <i class="fas fa-search prefix teal-text"></i>
-                <input type="text" name="query" id="query" minlength="1" class="validate" required>
-                <label for="query"><em class="teal-text"> </em> Search</label>
-            </div>
-            <div class="col s12 m4">
-                <a href="{{ url_for('get_words') }}"
-                    class="margin red lighten-3 waves-effect waves-light btn white-text text-shadow btn">Reset<i
-                        class="fas fa-redo left"></i></a>
-                <button type="submit" class="margin blue lighten-3 waves-effect waves-light btn white-text text-shadow">
-                    <i class="fas fa-search center"></i> Search
-                </button>
-            </div>
-        </div>
-    </form>
-</div>
+	<form action="{{ url_for('search') }}" method="post" class="col s12">
+		<div class="row valign-wrapper center-align">
+			<div class="input-field col s12 m8">
+				<i class="fas fa-search prefix teal-text"></i>
+				<input type="text" name="query" id="query" minlength="1" class="validate" required>
+					<label for="query">
+						<em class="teal-text"></em> Search
+					</label>
+				</div>
+				<div class="col s12 m4">
+					<a href="{{ url_for('get_words') }}"
+                    class="margin red lighten-3 waves-effect waves-light btn white-text text-shadow btn">Reset
+						<i
+                        class="fas fa-redo left"></i>
+					</a>
+					<button type="submit" class="margin blue lighten-3 waves-effect waves-light btn white-text text-shadow">
+						<i class="fas fa-search center"></i> Search
+                
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
 
 {% if words|length > 0%}
 
-<!-- Word cards-->
+	<!-- Word cards-->
 {% for words in words %}
 
-
-<div class="card padding teal lighten-4 margin_b z-depth-5">
-
-    <div class="card-content roboto black-text center row-fluid">
-        <h5>{{ words.eng_word }}</h5>
-
-
-    </div>
-    <div class="card card-tabs">
-        <ul class="tabs tabs-fixed-width">
-            <li class="tab"><a class="active" href="#tab1{{ loop.index }}">Translate-It</a></li>
-            <li class="tab"><a href="#tab2{{ loop.index }}">Helpful info</a></li>
-            <li class="tab"><a href="#tab3{{ loop.index }}">Used in a sentence</a></li>
-        </ul>
-    </div>
-    <div class="roboto row-fluid card-content black-text lighten-3 center padding">
-        <div class="card-content red-text" id="tab1{{ loop.index }}">
-            <h5>{{ words.lt_word }}</h5>
-        </div>
-        <div class="card-content red-text" id="tab2{{ loop.index }}">
-            <h5>{{ words.helpful_info }}</h5>
-            <div class="card-content">
-            </div>
-        </div>
-        <div class="card-content red-text" id="tab3{{ loop.index }}">
-            <h5>{{ words.used_in_sentence }}</h5>
-        </div>
-    </div>
+	<div class="card padding teal lighten-4 margin_b z-depth-5">
+		<div class="card-content roboto black-text center row-fluid">
+			<h5>{{ words.eng_word }}</h5>
+		</div>
+		<div class="card card-tabs">
+			<ul class="tabs tabs-fixed-width">
+				<li class="tab">
+					<a class="active" href="#tab1{{ loop.index }}">Translate-It</a>
+				</li>
+				<li class="tab">
+					<a href="#tab2{{ loop.index }}">Helpful info</a>
+				</li>
+				<li class="tab">
+					<a href="#tab3{{ loop.index }}">Used in a sentence</a>
+				</li>
+			</ul>
+		</div>
+		<div class="roboto row-fluid card-content black-text lighten-3 center padding">
+			<div class="card-content red-text" id="tab1{{ loop.index }}">
+				<h5>{{ words.lt_word }}</h5>
+			</div>
+			<div class="card-content red-text" id="tab2{{ loop.index }}">
+				<h5>{{ words.helpful_info }}</h5>
+				<div class="card-content"></div>
+			</div>
+			<div class="card-content red-text" id="tab3{{ loop.index }}">
+				<h5>{{ words.used_in_sentence }}</h5>
+			</div>
+		</div>
     {% if session.user|lower == words.created_by|lower %}
-    <div class="center padding">
-        <a class="waves-effect red lighten-3 waves-light btn white-text text-shadow btn-small modal-trigger"
+    
+		<div class="center padding">
+			<a class="waves-effect red lighten-3 waves-light btn white-text text-shadow btn-small modal-trigger"
             href="#modal{{ loop.index }}">Delete</a>
-        <a href="{{ url_for('edit_words', words_id=words._id) }}"
+			<a href="{{ url_for('edit_words', words_id=words._id) }}"
             class="waves-effect blue lighten-2 btn white-text text-shadow waves-light btn-small">Edit</a>
         {% endif %}
-    </div>
-    <!-- pop up message when deleting-->
-    <div id="modal{{ loop.index }}" class="modal">
-        <div class="modal-content teal-text text-shadow-no">
-            <h4>Are you sure you want to delete?</h4>
-            <p class="red-text">There is no going back!</p>
-        </div>
-        <div class="modal-footer">
-            <a href="{{ url_for('get_words') }}"
+    
+		</div>
+		<!-- pop up message when deleting-->
+		<div id="modal{{ loop.index }}" class="modal">
+			<div class="modal-content teal-text text-shadow-no">
+				<h4>Are you sure you want to delete?</h4>
+				<p class="red-text">There is no going back!</p>
+			</div>
+			<div class="modal-footer">
+				<a href="{{ url_for('get_words') }}"
                 class="waves-effect blue lighten-3 btn white-text text-shadow waves-light btn-small">Cancel</a>
-            <a href="{{ url_for('delete_words', words_id=words._id) }}"
+				<a href="{{ url_for('delete_words', words_id=words._id) }}"
                 class="modal-close waves-effect red lighten-3 btn white-text text-shadow waves-light btn-small">Delete</a>
-
-        </div>
-    </div>
-</div>
-
+			</div>
+		</div>
+	</div>
 {% endfor %}
 {% else %}
 
-<h3 class="black-text center-align">No Words Found!<br><em class="teal-text">Why not add it yourself?</em></h3>
-
+	<h3 class="black-text center-align">No Words Found!
+		<br>
+			<em class="teal-text">Why not add it yourself?</em>
+		</h3>
 {% endif%}
-
-
-
 
 {% endblock %}

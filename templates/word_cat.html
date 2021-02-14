@@ -1,51 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
 
+
 <h3 class="teal-text center-align">{{ category.category_name }}</h3>
 
-<!-- Word cards-->
+
 {% for words in words %}
 {% if categories.category_name == words.category_name %}
 
+
+<!-- Word cards-->
 <div class="card padding teal lighten-4 margin_b z-depth-5">
-    
-        <div class="card-content roboto black-text center row-fluid">
-            <h5>{{ words.eng_word }}</h5>
-
-
-        </div>
-        <div class="card card-tabs">
-            <ul class="tabs tabs-fixed-width">
-                <li class="tab"><a class="active" href="#tab1{{ loop.index }}">Translate-It</a></li>
-                <li class="tab"><a href="#tab2{{ loop.index }}">Helpful ifo</a></li>
-                <li class="tab"><a href="#tab3{{ loop.index }}">Used in a sentance</a></li>
-            </ul>
-        </div>
-        <div class="roboto row-fluid card-content black-text lighten-3 center padding">
-            <div  class="card-content red-text" id="tab1{{ loop.index }}">
-                <h5>{{ words.lt_word }}</h5>
-            </div>
-            <div class="card-content red-text" id="tab2{{ loop.index }}">
-                <h5>{{ words.helpful_info }}</h5>
-                <div class="card-content">
-        </div>
-            </div>
-            <div class="card-content red-text" id="tab3{{ loop.index }}">
-                <h5>{{ words.used_in_sentence }}</h5>
-            </div>
-        </div>
-        
-     <!-- return to category -->
-        </div>
-{% endif%}
-         {% endfor %}
-         <div class="container center teal-text"> 
-    <h4>Back to Categories</h4>
-        <a href="{{ url_for('home') }}" class="btn-floating blue lighten-2 text-shadow btn-large pulse"><i class="fas fa-undo"></i></a>
+	<div class="card-content roboto black-text center row-fluid">
+		<h5>{{ words.eng_word }}</h5>
+	</div>
+	<div class="card card-tabs">
+		<ul class="tabs tabs-fixed-width">
+			<li class="tab">
+				<a class="active" href="#tab1{{ loop.index }}">Translate-It</a>
+			</li>
+			<li class="tab">
+				<a href="#tab2{{ loop.index }}">Helpful ifo</a>
+			</li>
+			<li class="tab">
+				<a href="#tab3{{ loop.index }}">Used in a sentance</a>
+			</li>
+		</ul>
+	</div>
+	<div class="roboto row-fluid card-content black-text lighten-3 center padding">
+		<div class="card-content red-text" id="tab1{{ loop.index }}">
+			<h5>{{ words.lt_word }}</h5>
+		</div>
+		<div class="card-content red-text" id="tab2{{ loop.index }}">
+			<h5>{{ words.helpful_info }}</h5>
+			<div class="card-content"></div>
+		</div>
+		<div class="card-content red-text" id="tab3{{ loop.index }}">
+			<h5>{{ words.used_in_sentence }}</h5>
+		</div>
+	</div>
+	<!-- return to category -->
 </div>
+{% endif%}
+{% endfor %}
 
-        
-
-            
+<div class="container center teal-text">
+	<h4>Back to Categories</h4>
+	<a href="{{ url_for('home') }}" class="btn-floating blue lighten-2 text-shadow btn-large pulse">
+		<i
+            class="fas fa-undo"></i>
+	</a>
+</div>
 
 {% endblock %}
