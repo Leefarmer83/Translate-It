@@ -4,65 +4,66 @@
 <h3 class="teal-text center-align">Add Word to Translate-It</h3>
 
 <div class="row card-panel teal lighten-5">
-    <form class="col s12" method="POST" action="{{ url_for('add_words') }}">
-<!-- Category -->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-shapes teal-text prefix"></i>
-                <select id="category_name" name="category_name" class="validate" required>
-                    <option value="" disabled selected>Select Category</option>
+	<form class="col s12" method="POST" action="{{ url_for('add_words') }}">
+		<!-- Category -->
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-shapes teal-text prefix"></i>
+				<select id="category_name" name="category_name" class="validate" required>
+					<option value="" disabled selected>Select Category</option>
                     {% for category in categories %}
-                    <option class="black-text" value="{{ category.category_name}}">{{ category.category_name}}</option>
+                    
+					<option class="black-text" value="{{ category.category_name}}">{{ category.category_name}}</option>
                     {% endfor %}
-                </select>
-                <label for="category_name"></label>
-            </div>
-        </div>
-<!-- English word -->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-pencil-alt prefix teal-text"></i>
-                <input id="eng_word" name="eng_word" minlength="1" maxlength="50" type="text" class="validate" required>
-                <label for="eng_word">English Word</label>
-            </div>
-        </div>
-<!-- lituanian word -->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-language prefix teal-text"></i>
-                <textarea id="lt_word" name="lt_word" minlength="1" maxlength="50" class="materialize-textarea validate"
+                
+				</select>
+				<label for="category_name"></label>
+			</div>
+		</div>
+		<!-- English word -->
+		<div class="row">
+			<div class="input-field col s12">
+				<i class="fas fa-pencil-alt prefix teal-text"></i>
+				<input id="eng_word" name="eng_word" minlength="1" maxlength="50" type="text" class="validate" required>
+					<label for="eng_word">English Word</label>
+				</div>
+			</div>
+			<!-- lituanian word -->
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="fas fa-language prefix teal-text"></i>
+					<textarea id="lt_word" name="lt_word" minlength="1" maxlength="50" class="materialize-textarea validate"
                     required></textarea>
-                <label for="lt_word">Lithuanian Word</label>
-            </div>
-        </div>
-<!-- helpful information -->
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-info prefix teal-text"></i>
-                <textarea id="helpful_info" name="helpful_info" minlength="5" maxlength="300"
+					<label for="lt_word">Lithuanian Word</label>
+				</div>
+			</div>
+			<!-- helpful information -->
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="fas fa-info prefix teal-text"></i>
+					<textarea id="helpful_info" name="helpful_info" minlength="5" maxlength="300"
                     class="materialize-textarea validate" required></textarea>
-                <label for="helpful_info">Useful Information</label>
-            </div>
-        </div>
-<!-- example of word in a sentance -->  
-        <div class="row">
-            <div class="input-field col s12">
-                <i class="fas fa-align-left prefix teal-text"></i>
-                <textarea id="used_in_sentence" name="used_in_sentence" minlength="5" maxlength="300"
+					<label for="helpful_info">Useful Information</label>
+				</div>
+			</div>
+			<!-- example of word in a sentance -->
+			<div class="row">
+				<div class="input-field col s12">
+					<i class="fas fa-align-left prefix teal-text"></i>
+					<textarea id="used_in_sentence" name="used_in_sentence" minlength="5" maxlength="300"
                     class="materialize-textarea validate" required></textarea>
-                <label for="used_in_sentence">Example of word used in a sentence</label>
-            </div>
-        </div>
-<!-- Submit word -->
-        <div class="row">
-            <div class="col s12 center-align">
-                <button class="btn waves-effect blue lighten-2 waves-light text-shadow" type="submit">Add Word 
-                    <i class="fas fa-plus-circle"></i>
-
-                </button>
-            </div>
-        </div>
-    </form>
-</div>
-
+					<label for="used_in_sentence">Example of word used in a sentence</label>
+				</div>
+			</div>
+			<!-- Submit word -->
+			<div class="row">
+				<div class="col s12 center-align">
+					<button class="btn waves-effect blue lighten-2 waves-light text-shadow" type="submit">Add Word
+                    
+						<i class="fas fa-plus-circle"></i>
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
 {% endblock %}

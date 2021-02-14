@@ -54,9 +54,12 @@ body {
     font-family: Roboto;
 }
 
-
 .text-shadow-no {
     text-shadow: none;
+}
+
+.fontsize {
+    font-size: 40px;
 }
 
 

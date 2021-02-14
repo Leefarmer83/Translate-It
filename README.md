@@ -222,7 +222,7 @@ Username/password reset functionality - I would like to include this feature for
 
 ### GitHub setup
 
-Navigate to my Githubrepository: https://github.com/Leefarmer83/Translate-It
+Navigate to my Repository: https://github.com/Leefarmer83/Translate-It
 
 Steps taken for setup:
 1. Used template provided by [Code Institute](https://github.com/Code-Institute-Org/gitpod-full-template)
@@ -248,7 +248,7 @@ Steps taken for setup:
 
 If you wish to clone my repository, information on how can be found [here.](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-#### Deploy to Heroku
+## Deploy to Heroku
 
 The project was connected to Heroku using automatic deployment from my GitPod repository:
 

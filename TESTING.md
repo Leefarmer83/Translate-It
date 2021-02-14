@@ -3,6 +3,17 @@
 [return to README.md](https://github.com/Leefarmer83/Translate-It)
 
 
+
+# Validation
+### Websites used
+- [W3C Markup Validation Service](https://validator.w3.org/)
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+- [JSHint](https://jshint.com/)
+
+Validation message are below under each feature page.
+
+
+
 # base.html
 
 action taken | expected result | pass/fail
@@ -18,15 +29,24 @@ When viewing on mobile | Burger menu shows | pass
 Click on burger menu | Mobile side menu comes in from right | pass
 Check all links | All links take user to desired location | pass
 
+
+**HTML validator:**
+Errors are seen, this is expected due to the validator not handling Flask inside the HTML
+
+There is three warning messages: "Warning: Empty heading." this is due to fontawsome icons taking the place of text.
+
+
+
 # index.html (Home)
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Clicked on search word now | Navigates to words.html | pass
 Clicked on every category (9) | Taken to the category and olny words that belong to that category show | pass
 
+**HTML validator:**
+Errors are seen, this is expected due to the validator not handling Flask inside the HTML
 
 # register.html
-
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Only used 1 to 4 letters for username  | Section turns red and message states please match requested format| pass
@@ -41,6 +61,11 @@ Tried to use more than 15 letters for password  | Section does not allow | pass
 Cliked on Log In | Takes you to login page| pass
 Enter a successful username and password | Flash message stating succesful registration| pass
 
+**HTML validator:**
+Errors are seen, this is expected due to the validator not handling Flask inside the HTML
+
+Corrected error = The element a must not appear as a descendant of the button element. Took out the button, it was not needed.
+
 # login.html
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
@@ -50,6 +75,10 @@ Enter a wrong username or password | Flah message stating wrong username or pass
 Enter a successful username and password | Flash message stating succesful log in| pass
 Cliked on Register button | Takes you to Register page| pass
 
+**HTML validator:**
+Errors are seen, this is expected due to the validator not handling Flask inside the HTML
+
+Corrected error = The element a must not appear as a descendant of the button element. Took out the button, it was not needed.
 
 # profile.html
 action taken | expected result | pass/fail
@@ -62,6 +91,8 @@ Clicked on edit | Allows user to edit words| pass
 Clicked on delete | Pop up message aking for confirmation| pass
 Clicked on confirm deletion | Word is deleted from profile and library| pass
 
+**HTML validator:**
+Errors are seen, this is expected due to the validator not handling Flask inside the HTML
 
 # words.html
 action taken | expected result | pass/fail
@@ -74,7 +105,6 @@ Words created by user | Delete and Edit button shows| pass
 Words not by user | Delete and Edit button do not show| pass
 Click on the tabs on each card to show ndividual data | Correct information is under desired tab| pass
 Click on register and log in links on page | Taken to the correct location| pass
-
 
 # word_cat.html
 action taken | expected result | pass/fail
@@ -94,11 +124,17 @@ No Example of word used in a sentence added| section error message and section t
 All words entered correctly | Word is added to library and flash messege shown| pass
 Successful word added | word added to profile page | pass
 
+**HTML validator:**
+Errors are seen, this is expected due to the validator not handling Flask inside the HTML
+
 # add_category.html
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Click on add category | taken to add category page| pass
 Add new category | New category shows on manage category page and index.html page | pass
+
+**HTML validator:**
+Errors are seen, this is expected due to the validator not handling Flask inside the HTML
 
 # edit_category.html
 action taken | expected result | pass/fail
@@ -106,6 +142,9 @@ action taken | expected result | pass/fail
 Click on edit category | taken to edit category page| pass
 Edit category | Category is edited and shows on manage category page and index.html page | pass
 Clicked on cancel | Taken back to manage category page | pass
+
+**HTML validator:**
+Errors are seen, this is expected due to the validator not handling Flask inside the HTML
 
 # edit_words.html
 action taken | expected result | pass/fail
@@ -116,10 +155,17 @@ Clicked on cancel | Taken back to word  page | pass
 If the user created the word, click delete word | Pop up message shows| pass
 Confirm delete word | word is deleted from words page | pass
 
-# manage_categories
+**HTML validator:**
+Errors are seen, this is expected due to the validator not handling Flask inside the HTML
+
+# manage_categories.html
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Only Admin can see this section | Only shown to admin user | pass
 Clicked on edit category button | User taken to edit category | pass
 Clicked on delete category button | User taken to pop up message | pass
 Clicked on add category button | User taken to add category | pass
+
+**HTML validator:**
+Errors are seen, this is expected due to the validator not handling Flask inside the HTML
+

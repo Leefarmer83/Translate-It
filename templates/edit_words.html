@@ -5,43 +5,48 @@
 
 <div class="row card-panel teal lighten-5 lighten-5">
     <form class="col s12" method="POST" action="{{ url_for('edit_words', words_id=words._id) }}">
-<!-- Category -->
+        <!-- Category -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-shapes teal-text prefix"></i>
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled>Select Category</option>
                     {% for category in categories %}
-                        {% if category.category_name == words.category_name%}
-                            <option class="black-text" value="{{ category.category_name}}" selected>{{ category.category_name}}</option>
-                        {% else %}
-                            <option class="black-text" value="{{ category.category_name}}">{{ category.category_name}}</option>
-                        {% endif %}
+                    {% if category.category_name == words.category_name%}
+
+                    <option class="black-text" value="{{ category.category_name}}" selected>{{ category.category_name}}
+                    </option>
+                    {% else %}
+
+                    <option class="black-text" value="{{ category.category_name}}">{{ category.category_name}}</option>
+                    {% endif %}
                     {% endfor %}
+
                 </select>
                 <label for="category_name">Categoryt</label>
             </div>
         </div>
-<!-- English word -->
+        <!-- English word -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pencil-alt prefix teal-text"></i>
-                <input id="eng_word" name="eng_word" minlength="1" maxlength="50" 
-                value="{{ words.eng_word }}" type="text" class="validate" required>
+                <input id="eng_word" name="eng_word" minlength="1" maxlength="50" value="{{ words.eng_word }}"
+                    type="text" class="validate" required>
                 <label for="eng_word">English Word</label>
             </div>
         </div>
-<!-- Lituanian word -->
+        <!-- Lituanian word -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-language prefix teal-text"></i>
-                <textarea id="lt_word" name="lt_word" minlength="1" maxlength="50" class="materialize-textarea validate"required>
+                <textarea id="lt_word" name="lt_word" minlength="1" maxlength="50" class="materialize-textarea validate"
+                    required>
                 {{- words.lt_word -}}
                 </textarea>
                 <label for="lt_word">Lithuanian word</label>
             </div>
         </div>
-<!-- helpful information -->
+        <!-- helpful information -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-info prefix teal-text"></i>
@@ -52,7 +57,7 @@
                 <label for="helpful_info">Useful Information</label>
             </div>
         </div>
-<!-- example of word in a sentance -->  
+        <!-- example of word in a sentance -->
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-align-left prefix teal-text"></i>
@@ -63,13 +68,16 @@
                 <label for="used_in_sentence">Example of word used in a sentance</label>
             </div>
         </div>
-<!-- Submit word -->
+        <!-- Submit word -->
         <div class="row">
             <div class="col s12 center-align">
                 <!-- Canel button-->
                 <a href="{{ url_for('get_words') }}" class="btn red lighten-3 text-shadow">
-                        Cancel <i class="fas fa-ban"></i></a>
+                    Cancel
+                    <i class="fas fa-ban"></i>
+                </a>
                 <button class="btn blue lighten-2 waves-effect waves-light" type="submit">Edit Word
+
                     <i class="fas fa-user-edit"></i>
                 </button>
             </div>
