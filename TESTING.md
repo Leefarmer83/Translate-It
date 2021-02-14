@@ -135,6 +135,14 @@ Add new category | New category shows on manage category page and index.html pag
 **HTML validator:**
 Errors are seen, this is expected due to the validator not handling Flask inside the HTML
 
+## Important - To test category functionality you must be logged in as admin, please use the following credentials:
+**Username: admin**
+
+**Password: Budnlee5**
+
+Here you can test; adding, deleting and editing categories. 
+## this will be deleted after the App is assessed by code institute.
+
 # edit_category.html
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
@@ -144,6 +152,15 @@ Clicked on cancel | Taken back to manage category page | pass
 
 **HTML validator:**
 Errors are seen, this is expected due to the validator not handling Flask inside the HTML
+
+## Important - To test category functionality you must be logged in as admin, please use the following credentials:
+**Username: admin**
+
+**Password: Budnlee5**
+
+Here you can test; adding, deleting and editing categories. 
+## this will be deleted after the App is assessed by code institute.
+
 
 **Bug Fix**
 I was having problems deleting words and Categories, every time i deleted, it always deleted the first word. This was down to the ID not being unique, I added {{ loop.index }} in the ID to fix this.
@@ -175,6 +192,14 @@ Clicked on add category button | User taken to add category | pass
 
 **HTML validator:**
 Errors are seen, this is expected due to the validator not handling Flask inside the HTML
+
+## Important - To test category functionality you must be logged in as admin, please use the following credentials:
+**Username: admin**
+
+**Password: Budnlee5**
+
+Here you can test; adding, deleting and editing categories. 
+## this will be deleted after the App is assessed by code institute.
 
 # Pronunciation.html
 action taken | expected result | pass/fail
