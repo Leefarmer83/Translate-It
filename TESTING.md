@@ -141,7 +141,7 @@ Errors are seen, this is expected due to the validator not handling Flask inside
 **Password: Budnlee5**
 
 Here you can test; adding, deleting and editing categories. 
-## this will be deleted after the App is assessed by code institute.
+## This will be deleted after the project is assessed by code institute.
 
 # edit_category.html
 action taken | expected result | pass/fail
@@ -159,7 +159,7 @@ Errors are seen, this is expected due to the validator not handling Flask inside
 **Password: Budnlee5**
 
 Here you can test; adding, deleting and editing categories. 
-## this will be deleted after the App is assessed by code institute.
+## This will be deleted after the project is assessed by code institute.
 
 
 **Bug Fix**
@@ -199,7 +199,7 @@ Errors are seen, this is expected due to the validator not handling Flask inside
 **Password: Budnlee5**
 
 Here you can test; adding, deleting and editing categories. 
-## this will be deleted after the App is assessed by code institute.
+## This will be deleted after the project is assessed by code institute.
 
 # Pronunciation.html
 action taken | expected result | pass/fail
