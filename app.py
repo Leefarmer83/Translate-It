@@ -210,7 +210,7 @@ def delete_words(words_id):
     delete words, code inspired by code institute mini project
     """
     mongo.db.words.remove({"_id": ObjectId(words_id)})
-    flash("Words Successfully Deleted")
+    flash("Word Successfully Deleted")
     return redirect(url_for("get_words"))
 
 
