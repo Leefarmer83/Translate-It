@@ -34,10 +34,9 @@ The website is deployed live at [https://my-translate-it.herokuapp.com/](https:/
 - [Technologies Used](#technologies-used)
 - [Testing](#testing)
 - [Deployment](#deployment)
-- [Credits](README.md#credits)
-    - [Media Design](README.md#media_design)
-    - [Content](README.md#content)
-    - [Acknowledgements](README.md#acknowledgements)
+- [Credits](#credits)
+    - [Content](#content)
+    - [Acknowledgements](#acknowledgements)
    
 
 
