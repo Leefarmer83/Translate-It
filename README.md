@@ -228,8 +228,7 @@ Steps taken for setup:
 1. Used template provided by [Code Institute](https://github.com/Code-Institute-Org/gitpod-full-template)
 2. Create new repository from template page
 3. Install flask: pip3 install Flask
-    Details for env file:
-
+    - Details for env file:
             - import os
             - os.environ.setdefault("IP", "add here")
             - os.environ.setdefault("PORT", "add here")
@@ -243,7 +242,7 @@ Steps taken for setup:
 7. Now we want Flask to communicate with MongoDB:
     - pip3 install flask-pymongo
     - pip3 install dnspython
-    - pip3 freeze --local > requirements.txt (Make sure all requirements mentioned)
+    - pip3 freeze --local > requirements.txt (Make sure all requirements are called out in the file)
 8. Now you can update heroku with Mongo URI
 
 If you wish to clone my repository, information on how can be found [here.](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -254,7 +253,7 @@ The project was connected to Heroku using automatic deployment from my GitPod re
 
 **Note:** Please make sure you have already created your new repo in Github and have a env.py file to store your sensitive data.
 
-1. In the terminal create requirements.txt and Procfile files using the commands below (mentioned above):
+1. In Gitpod create requirements.txt and Procfile files using the commands below (mentioned above):
    - $ pip3 freeze --local > requirements.txt
    - $ echo web: python app.py > Procfile
 
@@ -283,10 +282,18 @@ The project was connected to Heroku using automatic deployment from my GitPod re
 
 
 
-Credits
+## Credits
 
-Content
+### Content
+- The concept, design and text for this project was created by the developer. 
 
-Media
+### Media
+- Images used are from a free image website: https://www.shutterstock.com/.
 
-Acknowledgements
+### Code
+- Code was primarily inspired by the Task Manager mini project tutorials. 
+
+### Acknowledgements
+
+Special thanks to my Code Institute Mentor Gerard McBride for his support and time.
+Also, thanks to Igor (tutor support) I have not used tutor support until this project, I had one issue that was driving me crazy, he helpped directed me to discover the answer.
