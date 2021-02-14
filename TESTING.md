@@ -9,7 +9,7 @@
 - [JSHint](https://jshint.com/)
 - [PEP8 Validator](http://pep8online.com/)
 
-Validation message are below under each feature page.
+HTML Validation message are below, under each feature.
 
 # base.html
 action taken | expected result | pass/fail
