@@ -207,10 +207,11 @@ Users can also delete the word by clicking on the delete button. If a user opts 
 Once logged in as admin, users can Manage Categories. Users can add a category by clicking on the Add Category button. Existing categories can be deleted or edited. If a user opts to delete the category by clicking on the delete button, a pop up message warning tells the user that this action cannot be undone. Users can choose to delete, or cancel the deletion. If a user opts to edit a category, they click on the edit button and are taken to  the Edit Category form where users can edit the category name. Users can opt to cancel by clicking on the cancel button, or complete the edit by clicking on the Edit_Category button.
 
 # Future Features
-Contact for adding categories - I would like to add a contact form for users to request new categories.
-Click to hear pronunciation - I would like to add a feature where you have a listen event on the word so you can hear the pronunciation.
-Capture email addresses - If I was to offer the website out to the world, i would include and email address capture when users register.
-Username/password reset functionality - I would like to include this feature for users to be self serving if they forget their log in details.
+- Contact for adding categories - I would like to add a contact form for users to request new categories.
+- Click to hear pronunciation - I would like to add a feature where you have a 'listen event' on a word so you can hear the pronunciation.
+- Capture email addresses - If I was to offer the website out to the world, I would capture email addresses when users register.
+- Username/password reset functionality - I would like to include this feature for users to be self serving if they forget their log in details.
+- Error message - My website does not have any error's but i will look to include 500/400 error messaging.
 
 # Deployment
 ### Requirements for Deployment
@@ -293,7 +294,7 @@ The project was connected to Heroku using automatic deployment from my GitPod re
 ### Code
 - Code was primarily inspired by the Task Manager mini project tutorials. 
 
-### Acknowledgements
+# Acknowledgements
 
 Special thanks to my Code Institute Mentor Gerard McBride for his support and time.
-Also, thanks to Igor (tutor support) I have not used tutor support until this project, I had one issue that was driving me crazy, he t directed me to discover the answer.
+Also, thanks to Igor (tutor support), I have not used tutor support until this project, I had one issue that was driving me crazy, Igor helped me to understand where I was going wrong.
