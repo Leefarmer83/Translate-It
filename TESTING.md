@@ -2,8 +2,6 @@
 
 [return to README.md](https://github.com/Leefarmer83/Translate-It)
 
-
-
 # Validation
 ### Websites used
 - [W3C Markup Validation Service](https://validator.w3.org/)
@@ -36,7 +34,7 @@ There is three warning messages: "Warning: Empty heading." this is due to fontaw
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Clicked on search word now | Navigates to words.html | pass
-Clicked on every category (9) | Taken to the category and olny words that belong to that category show | pass
+Clicked on every category (9) | Taken to the category and only words that belong to that category show | pass
 
 **HTML validator:**
 Errors are seen, this is expected due to the validator not handling Flask inside the HTML
@@ -53,8 +51,8 @@ Only used 1 to 4 letters for password  | Section turns red and message states pl
 Did not enter letters/numbers in the password section | Section turns red and message states please fill out field when trying to submit| pass
 Used 5 to 15 letters for password  | Section turns green | pass
 Tried to use more than 15 letters for password  | Section does not allow | pass
-Cliked on Log In | Takes you to login page| pass
-Enter a successful username and password | Flash message stating succesful registration| pass
+Clicked on Log In | Takes you to login page| pass
+Enter a successful username and password | Flash message stating successful registration| pass
 
 **HTML validator:**
 Errors are seen, this is expected due to the validator not handling Flask inside the HTML
@@ -66,9 +64,9 @@ action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Only used 1 to 4 letters for username  | Section turns red and message states please match requested format| pass
 Only used 1 to 4 letters for password  | Section turns red and message states please match requested format| pass
-Enter a wrong username or password | Flah message stating wrong username or password | pass
-Enter a successful username and password | Flash message stating succesful log in| pass
-Cliked on Register button | Takes you to Register page| pass
+Enter a wrong username or password | Flash message stating wrong username or password | pass
+Enter a successful username and password | Flash message stating successful log in| pass
+Clicked on Register button | Takes you to Register page| pass
 
 **HTML validator:**
 Errors are seen, this is expected due to the validator not handling Flask inside the HTML
@@ -83,7 +81,7 @@ Log in | Created words from user shows | pass
 Clicked on add words | Taken to word creation page| pass
 Clicked on search | Taken to word page| pass
 Clicked on edit | Allows user to edit words| pass
-Clicked on delete | Pop up message aking for confirmation| pass
+Clicked on delete | Pop up message asking for confirmation| pass
 Clicked on confirm deletion | Word is deleted from profile and library| pass
 
 **HTML validator:**
@@ -93,12 +91,12 @@ Errors are seen, this is expected due to the validator not handling Flask inside
 action taken | expected result | pass/fail
 ------------ | --------------- | ---------
 Search for a word that is in the library | Only that word shows and/or same word (good as an example) | pass
-Search for a word that is not inthe library | No words message shows | pass
+Search for a word that is not in the library | No words message shows | pass
 Search for a word and then hit reset | All words searched for are removed and shows all words | pass
 Scroll down the page | All words show in alphabetical order| pass
 Words created by user | Delete and Edit button shows| pass
 Words not by user | Delete and Edit button do not show| pass
-Click on the tabs on each card to show ndividual data | Correct information is under desired tab| pass
+Click on the tabs on each card to show individual data | Correct information is under desired tab| pass
 Click on register and log in links on page | Taken to the correct location| pass
 
 **HTML validator:**
@@ -122,7 +120,7 @@ No English word added| section error message and section turns red | pass
 No Lithuanian word added| section error message and section turns red | pass
 No Useful Information added| section error message and section turns red | pass
 No Example of word used in a sentence added| section error message and section turns red | pass
-All words entered correctly | Word is added to library and flash messege shown| pass
+All words entered correctly | Word is added to library and flash message shown| pass
 Successful word added | word added to profile page | pass
 
 **HTML validator:**
